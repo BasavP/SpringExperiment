@@ -1,6 +1,7 @@
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.6'
+	id("com.diffplug.spotless") version "6.22.0"
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
@@ -31,6 +32,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	// https://mvnrepository.com/artifact/redis.clients/jedis
+	implementation 'redis.clients:jedis:5.1.0'
+
 }
 
 tasks.named('bootBuildImage') {
