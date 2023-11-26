@@ -1,3 +1,4 @@
+/*
 package com.learn.learn.redis.config;
 
 import org.springframework.context.annotation.Bean;
@@ -12,7 +13,11 @@ public class RedisConfig {
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        return new JedisConnectionFactory();
+        JedisConnectionFactory jedisConFactory
+                = new JedisConnectionFactory();
+        jedisConFactory.setHostName("localhost");
+        jedisConFactory.setPort(6379);
+        return jedisConFactory;
     }
 
     @Bean
@@ -24,3 +29,4 @@ public class RedisConfig {
     }
 
 }
+*/

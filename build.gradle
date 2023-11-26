@@ -32,8 +32,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
-	// https://mvnrepository.com/artifact/redis.clients/jedis
-	implementation 'redis.clients:jedis:5.1.0'
+
 
 }
 

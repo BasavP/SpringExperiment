@@ -1,23 +1,22 @@
-package com.learn.learn.Entity;
+package com.learn.learn.Event;
 
 
+import com.learn.learn.Entity.Student;
 import lombok.*;
-import org.springframework.data.redis.core.RedisHash;
 
-@RedisHash("Student")
-@Data
 @Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student {
+@ToString
+public class StudentEvent {
     public enum Gender {
         MALE,FEMALE
     }
 
     private String id ;
     private String name;
-    private Gender gender;
+    private Student.Gender gender;
     private int grade;
 }
